@@ -1,0 +1,63 @@
+﻿@{
+    //Layout = null;
+}
+
+<p>
+    <button class="btn btn-dark" onclick="AddEditPersonalInfo(0)">Add New</button>
+</p>
+
+<div class="container">
+    <div style="width:100%; margin:0 auto;">
+        <table id="tblPersonalInfo" class="tblCustomTR" border="1" style="width:100%;">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>No</th>
+                    <th>First Name</th>
+                    <th>Date Of Birth</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>MobileNo</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="PersonalInfoFormModel" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="title" class="modal-title">Add Personal Info</h3>
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body" id="PersonalInfoFormModelDiv">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+@if (TempData["successAlert"] != null)
+{
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p>@TempData["successAlert"]</p>
+    </div>
+}
+
+<partial name="_IndexJSStuff.cshtml" />
+
+<style>
+    .tblCustomTR tr {
+        line-height: 40px;
+    }
+</style>
+
+
+
+
+
+

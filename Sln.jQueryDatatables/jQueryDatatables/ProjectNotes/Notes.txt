@@ -1,0 +1,21 @@
+﻿
+
+https://datatables.net/download/
+https://datatables.net/
+
+Date time format:
+https://stackoverflow.com/questions/28733613/format-json-date-to-mm-dd-yy-format-before-displaying-in-a-jquery-datatable
+
+
+Install-Package Microsoft.EntityFrameworkCore -Version 2.2.0
+
+Install-Package System.Linq.Dynamic.Core -Version 1.0.10
+
+Install-Package System.Linq.Dynamic -Version 1.0.7
+
+
+
+Ref:
+https://www.c-sharpcorner.com/article/using-jquery-datatables-grid-with-asp-net-core-mvc/
+Demo project-2:
+https://www.c-sharpcorner.com/article/ajax-crud-operation-with-jquery-datatables-in-asp-net-mvc-5-for-beginners/

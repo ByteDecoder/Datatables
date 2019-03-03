@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jQueryDatatables", "jQueryDatatables\jQueryDatatables.csproj", "{022FDC6E-8DBB-4043-84D1-B9E260536D41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{830CECEA-6E4D-4064-86DD-8488D6252080}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{022FDC6E-8DBB-4043-84D1-B9E260536D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022FDC6E-8DBB-4043-84D1-B9E260536D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022FDC6E-8DBB-4043-84D1-B9E260536D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022FDC6E-8DBB-4043-84D1-B9E260536D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830CECEA-6E4D-4064-86DD-8488D6252080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830CECEA-6E4D-4064-86DD-8488D6252080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830CECEA-6E4D-4064-86DD-8488D6252080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830CECEA-6E4D-4064-86DD-8488D6252080}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D65E0C5-8DD9-4175-B798-6D9806385D61}
+	EndGlobalSection
+EndGlobal
