@@ -53,7 +53,8 @@ namespace jQueryDatatables.Controllers
                     personalInfoData = personalInfoData.Where(t => t.FirstName.Contains(searchValue)
                     || t.LastName.Contains(searchValue)
                     || t.City.Contains(searchValue)
-                    || t.Country.Contains(searchValue));
+                    || t.Country.Contains(searchValue)
+                    || t.MobileNo.Contains(searchValue));
                 }
 
                 resultTotal = personalInfoData.Count();

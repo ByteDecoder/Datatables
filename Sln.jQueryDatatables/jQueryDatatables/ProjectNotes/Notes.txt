@@ -19,3 +19,14 @@ Ref:
 https://www.c-sharpcorner.com/article/using-jquery-datatables-grid-with-asp-net-core-mvc/
 Demo project-2:
 https://www.c-sharpcorner.com/article/ajax-crud-operation-with-jquery-datatables-in-asp-net-mvc-5-for-beginners/
+
+
+Datatable button:
+https://stackoverflow.com/questions/32629949/show-entries-dropdown-disappear-when-using-export-tools
+
+
+Datatable field customization:
+https://editor.datatables.net/examples/extensions/exportButtons.html
+
+HTML5 export buttons
+https://datatables.net/extensions/buttons/examples/html5/simple.html
