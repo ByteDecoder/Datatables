@@ -30,3 +30,13 @@ https://editor.datatables.net/examples/extensions/exportButtons.html
 
 HTML5 export buttons
 https://datatables.net/extensions/buttons/examples/html5/simple.html
+
+Default ordering (sorting)
+https://datatables.net/examples/basic_init/table_sorting.html
+
+
+Footer, Logo, Header, table line etc
+https://codepen.io/RedJokingInn/pen/XMVoXL
+More doc:
+https://github.com/bpampuch/pdfmake
+

@@ -29,6 +29,7 @@ namespace jQueryDatatables.Controllers
                 var draw = HttpContext.Request.Form["draw"].FirstOrDefault();
                 var start = Request.Form["start"].FirstOrDefault();
                 var length = Request.Form["length"].FirstOrDefault();
+
                 var sortColumn = Request.Form["columns[" + Request.Form["order[0][column]"].FirstOrDefault() + "][name]"].FirstOrDefault();
                 var sortColumnAscDesc = Request.Form["order[0][dir]"].FirstOrDefault();
                 var searchValue = Request.Form["search[value]"].FirstOrDefault();
@@ -37,9 +38,7 @@ namespace jQueryDatatables.Controllers
                 int skip = start != null ? Convert.ToInt32(start) : 0;
                 int resultTotal = 0;
 
-                var personalInfoData = (from tblObj in _personalInfoRepository.GetAll()
-                                        select tblObj);
-                personalInfoData.OrderByDescending(x => x.ID);
+                var personalInfoData = (from tblObj in _personalInfoRepository.GetAll() select tblObj);
 
                 //Sorting
                 if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnAscDesc)))
