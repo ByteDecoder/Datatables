@@ -135,12 +135,12 @@
             { "data": "MobileNo", "name": "MobileNo", "autoWidth": true },
             {
                 data: null, render: function (data, type, row) {
-                    return "<a href='#' class='btn btn-info' onclick=AddEditPersonalInfo('" + row.ID + "');>Edit</a>";
+                    return "<a href='#' class='btn btn-info btn-sm' onclick=AddEditPersonalInfo('" + row.ID + "');>Edit</a>";
                 }
             },
             {
                 data: null, render: function (data, type, row) {
-                    return "<a href='#' class='btn btn-danger' onclick=DeletePersonalInfo('" + row.ID + "'); >Delete</a>";
+                    return "<a href='#' class='btn btn-danger btn-sm' onclick=DeletePersonalInfo('" + row.ID + "'); >Delete</a>";
                 }
             }
         ],
