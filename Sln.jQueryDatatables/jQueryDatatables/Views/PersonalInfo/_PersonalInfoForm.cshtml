@@ -1,9 +1,10 @@
 ﻿@model Data.Models.PersonalInfo
 
+
 <div>
     <div class="row">
         <div class="col-md-8">
-            <form id="PersonalInfoForm">
+            <form id="PersonalInfoForm" method="POST">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="ID" />
 
@@ -17,27 +18,29 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="DateOfBirth" class="control-label"></label>
-                    <input asp-for="DateOfBirth" type="date" class="form-control" />
+                    <input asp-for="DateOfBirth" id="DateOfBirth" type="text" class="form-control" />
                 </div>
+
+
                 <div class="form-group">
                     <label asp-for="City" class="control-label"></label>
                     <input asp-for="City" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Country" class="control-label"></label>
-                    <input asp-for="Country" class="form-control" />
+                    <input asp-for="Country" class="form-control" id="country" data-validation="country" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MobileNo" class="control-label"></label>
-                    <input asp-for="MobileNo" class="form-control" />
+                    <input asp-for="MobileNo" class="form-control" type="number" />
                 </div>
                 <div class="form-group">
                     <label asp-for="NID" class="control-label"></label>
-                    <input asp-for="NID" class="form-control" />
+                    <input asp-for="NID" class="form-control" type="number" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Email" class="control-label"></label>
-                    <input asp-for="Email" class="form-control" />
+                    <input asp-for="Email" class="form-control" data-validation="email" />
                 </div>
                 <div class="form-group">
                     <input type="button" id="btnSubmit" value="Save" class="btn btn-block btn-info">
@@ -47,3 +50,5 @@
     </div>
 </div>
 
+
+<script src="~/js/_PersonalInfoForm.js"></script>

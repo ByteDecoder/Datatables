@@ -22,7 +22,7 @@ namespace jQueryDatatables.Controllers
         }
 
         [HttpPost]
-        public IActionResult DataTabelData()
+        public IActionResult GetDataTabelData()
         {
             try
             {

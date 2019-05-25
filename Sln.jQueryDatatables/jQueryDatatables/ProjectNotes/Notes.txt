@@ -7,11 +7,17 @@ Date time format:
 https://stackoverflow.com/questions/28733613/format-json-date-to-mm-dd-yy-format-before-displaying-in-a-jquery-datatable
 
 
+Nuget Packages:
 Install-Package Microsoft.EntityFrameworkCore -Version 2.2.0
-
 Install-Package System.Linq.Dynamic.Core -Version 1.0.10
-
 Install-Package System.Linq.Dynamic -Version 1.0.7
+Jquery:
+Install-Package jquery.datatables -Version 1.10.15
+Install-Package jQuery -Version 3.4.1
+Install-Package jQuery.Validation -Version 1.17.0
+ Install-Package jQuery.Validation
+
+
 
 
 
@@ -41,9 +47,34 @@ More doc:
 https://github.com/bpampuch/pdfmake
 
 
+Datatable very good CRUD: 
+https://editor.datatables.net/examples/api/clientValidation.html
+
+
+
+jQuery validation:
+http://www.formvalidator.net/
+http://www.formvalidator.net/#reg-form
+http://jsfiddle.net/xs5vrrso/
+
+jQuery datepicker
+https://jqueryui.com/datepicker/
+Install-Package jQuery-datetimepicker -Version 2.4.5
+unInstall-Package jQuery-datetimepicker -Version 2.4.5
+Install-Package jQuery.UI.Combined -Version 1.12.1
+https://jqueryui.com/download/
+
+
+
 
 Task Notes:
 WIP:
 All data export into PDF/CSV
+https://datatables.net/forums/discussion/48044/export-all-regardless-of-pagination
 Add Refresh Button
+
+Validation: Done
+Mobile No, NID, Email
+Problem:
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 

@@ -5,6 +5,7 @@
         select: true,
         "order": [[0, "desc"]],
         dom: 'Bfrtip',
+
         buttons: [
             'pageLength',
             {
@@ -98,7 +99,8 @@
                     {
                         extend: 'print',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4, 5]
+                            columns: [0, 1, 2, 3, 4, 5],
+                            page: 'all'
                         }
                     }
                 ]
@@ -112,7 +114,7 @@
         "stateSave": true,
 
         "ajax": {
-            "url": "/PersonalInfo/DataTabelData",
+            "url": "/PersonalInfo/GetDataTabelData",
             "type": "POST",
             "datatype": "json"
         },
@@ -144,6 +146,11 @@
                 }
             }
         ],
+
+        'columnDefs': [{
+            'targets': [6, 7],
+            'orderable': false,
+        }],
         "lengthMenu": [[10, 15, 25, 50, 100, 200], [10, 15, 25, 50, 100, 200]]
     });
 });

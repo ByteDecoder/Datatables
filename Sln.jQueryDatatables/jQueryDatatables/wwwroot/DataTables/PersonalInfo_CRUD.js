@@ -33,6 +33,18 @@ $('body').on('click', "#btnSubmit", function () {
         return;
     }
 
+
+    if ($.trim($('#DateOfBirth').val()) === '') {
+        Swal.fire({
+            title: "Alert", text: "Date Of Birth can not be left blank.",
+            icon: "info", closeOnConfirm: false,
+            onAfterClose: () => {
+                setTimeout(() => $("#DateOfBirth").focus(), 110);
+            }
+        });
+        return;
+    }
+
     $.ajax({
         type: "POST",
         url: "/PersonalInfo/Create",
@@ -80,3 +92,4 @@ var DeletePersonalInfo = function (id) {
         }
     });
 };
+

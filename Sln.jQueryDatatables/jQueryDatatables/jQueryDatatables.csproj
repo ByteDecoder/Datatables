@@ -12,8 +12,15 @@
     <None Remove="wwwroot\DataTable\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\lib\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
+    <None Include="wwwroot\lib\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <None Include="wwwroot\lib\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+  </ItemGroup>
+
 
   <ItemGroup>
+    <PackageReference Include="jQuery.Validation" Version="1.17.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
