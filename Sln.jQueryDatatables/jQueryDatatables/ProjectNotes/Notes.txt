@@ -66,6 +66,16 @@ https://jqueryui.com/download/
 
 
 
+CVS export
+Install-Package CsvHelper
+https://joshclose.github.io/CsvHelper/getting-started#writing-a-csv-file
+https://stackoverflow.com/questions/21093150/using-csvhelper-to-output-stream-to-browser
+
+
+Controller to view:
+https://stackoverflow.com/questions/2503923/html-button-calling-an-mvc-controller-and-action-method
+
+
 
 Task Notes:
 WIP:

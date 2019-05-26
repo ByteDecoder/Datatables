@@ -43,3 +43,16 @@ jQuery validation:
         lang: 'en'
     });
 </script>
+
+public static byte[] WriteCsvToMemory(IEnumerable<PersonalInfo> records)
+        {
+            using (var memoryStream = new MemoryStream())
+            using (var streamWriter = new StreamWriter(memoryStream))
+            using (var csvWriter = new CsvWriter(streamWriter))
+            {
+                csvWriter.WriteRecords(records);
+                streamWriter.Flush();
+                return memoryStream.ToArray();
+            }
+        }
+

@@ -1,7 +1,9 @@
 ﻿using Data.Models;
 using Data.Repository;
+using jQueryDatatables.LIB;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.IO;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
@@ -38,14 +40,14 @@ namespace jQueryDatatables.Controllers
                 int skip = start != null ? Convert.ToInt32(start) : 0;
                 int resultTotal = 0;
 
-                var personalInfoData = (from tblObj in _personalInfoRepository.GetAll() select tblObj);
+                var personalInfoData = (from tblObj in _personalInfoRepository.GetAll() select tblObj).Take(100);
 
                 //Sorting
                 if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnAscDesc)))
                 {
-                    personalInfoData = _personalInfoRepository.GetAll().OrderBy(sortColumn + " " + sortColumnAscDesc);
+                    personalInfoData = _personalInfoRepository.GetAll().Take(100).OrderBy(sortColumn + " " + sortColumnAscDesc);
                 }
-                
+
                 //Search
                 if (!string.IsNullOrEmpty(searchValue))
                 {
@@ -110,5 +112,15 @@ namespace jQueryDatatables.Controllers
             _personalInfoRepository.Delete(personalInfo);
             return RedirectToAction("Index");
         }
+
+
+        public FileStreamResult ExportAllDatatoCSV()
+        {
+            var personalInfoData = (from tblObj in _personalInfoRepository.GetAll() select tblObj).Take(100);
+            var result = Common.WriteCsvToMemory(personalInfoData);
+            var memoryStream = new MemoryStream(result);
+            return new FileStreamResult(memoryStream, "text/csv") { FileDownloadName = "Personal_Info_Data.csv" };
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿var AddEditPersonalInfo = function (id) {
+﻿
+var AddEditPersonalInfo = function (id) {
     var url = "/PersonalInfo/AddEditPersonalInfo?id=" + id;
     if (id > 0)
         $('#title').html("Edit Personal Info");
@@ -92,4 +93,23 @@ var DeletePersonalInfo = function (id) {
         }
     });
 };
+
+
+//Export All Data to CSV
+//$('body').on('click', "#btnExportAllDatatoCSV", function () {
+//    $.ajax({
+//        type: "POST",
+//        url: "/PersonalInfo/ExportAllDatatoCSV"
+//        //success: function () {           
+//        //    Swal.fire({
+//        //        title: "Alert!",
+//        //        text: "Data Export to CSV Successfully",
+//        //        type: "Success"
+//        //    });
+//        //},
+//        //error: function (errormessage) {
+//        //    alert(errormessage.responseText);
+//        //}
+//    });
+//});
 

@@ -1,4 +1,5 @@
-﻿$("#DateOfBirth").datepicker({
+﻿
+$("#DateOfBirth").datepicker({
     dateFormat: 'yy-mm-dd ',
     maxDate: '0',
     changeMonth: true,
@@ -12,3 +13,5 @@ $.validate({
         $('#country').suggestCountry();
     }
 });
+
+
