@@ -31,7 +31,7 @@ GO
 
 
 
---Data Insertion
+--Moc data preparation
 ----truncate <br />
 truncate table PersonalInfo
 ---SQL loop insert 

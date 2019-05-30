@@ -40,12 +40,12 @@ namespace jQueryDatatables.Controllers
                 int skip = start != null ? Convert.ToInt32(start) : 0;
                 int resultTotal = 0;
 
-                var personalInfoData = (from tblObj in _personalInfoRepository.GetAll() select tblObj).Take(100);
+                var personalInfoData = (from tblObj in _personalInfoRepository.GetAll() select tblObj);
 
                 //Sorting
                 if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnAscDesc)))
                 {
-                    personalInfoData = _personalInfoRepository.GetAll().Take(100).OrderBy(sortColumn + " " + sortColumnAscDesc);
+                    personalInfoData = _personalInfoRepository.GetAll().OrderBy(sortColumn + " " + sortColumnAscDesc);
                 }
 
                 //Search
