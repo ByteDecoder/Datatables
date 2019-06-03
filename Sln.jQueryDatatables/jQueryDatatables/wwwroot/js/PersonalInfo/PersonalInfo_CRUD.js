@@ -48,7 +48,7 @@ $('body').on('click', "#btnSubmit", function () {
 
     $.ajax({
         type: "POST",
-        url: "/PersonalInfo/Create",
+        url: "/PersonalInfo/AddEditPersonalInfo",
         data: myformdata,
         success: function (result) {
             $("#PersonalInfoFormModel").modal("hide");

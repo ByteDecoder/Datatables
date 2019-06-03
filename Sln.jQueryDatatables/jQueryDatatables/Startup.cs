@@ -1,5 +1,6 @@
 ﻿using Data;
 using Data.Repository;
+using jQueryDatatables.LIB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -32,6 +33,9 @@ namespace jQueryDatatables
             var connectionString = Configuration["ConnectionStrings:MSSQLConn"];
             services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(connectionString));
 
+            //Cross-Origin Resource Sharing (CORS) - HTTP
+            services.ConfigureCORS();
+
             services.AddTransient<IPersonalInfoRepository, PersonalInfoRepository>();
 
             services.AddMvc().AddJsonOptions(options =>
@@ -41,6 +45,7 @@ namespace jQueryDatatables
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

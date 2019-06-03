@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using Microsoft.Extensions.DependencyInjection;
 using System.IO;
 
 namespace jQueryDatatables.LIB
@@ -15,6 +16,18 @@ namespace jQueryDatatables.LIB
                 streamWriter.Flush();
                 return memoryStream.ToArray();
             }
+        }
+
+        public static void ConfigureCORS(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
         }
     }
 }

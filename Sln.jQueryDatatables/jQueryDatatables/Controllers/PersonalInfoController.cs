@@ -79,7 +79,7 @@ namespace jQueryDatatables.Controllers
         }
 
         [HttpPost]
-        public async Task<string> Create(PersonalInfo personalInfo)
+        public async Task<string> AddEditPersonalInfo(PersonalInfo personalInfo)
         {
             if (ModelState.IsValid)
             {
