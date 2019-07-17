@@ -88,3 +88,13 @@ Mobile No, NID, Email
 Problem:
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
+
+Add docker:
+dotnet publish -o ./publish 
+docker pull mcr.microsoft.com/dotnet/core/aspnet:2.2
+
+https://medium.com/@alcalawilfre/asp-net-core-with-docker-a-beginers-guide-4f490f644a89
+
+docker build -t myimage .
+docker run -p 5000:80 myimage
+
